@@ -17,6 +17,26 @@ const options = {
         ],
         components: {
             schemas: {
+                Rating: {
+                    type: 'object',
+                    required: ['calendar', 'score'],
+                    properties: {
+                        calendar: {
+                            type: 'string',
+                            description: 'ID del calendario asociado',
+                        },
+                        score: {
+                            type: 'integer',
+                            enum: [0, 1],
+                            description: 'Puntuación binaria (0 = negativo, 1 = positivo)',
+                        },
+                        timestamp: {
+                            type: 'string',
+                            format: 'date-time',
+                            description: 'Fecha y hora de la valoración',
+                        },
+                    },
+                },
                 Chat: {
                     type: 'object',
                     required: ['from', 'to', 'message', 'recieved'],

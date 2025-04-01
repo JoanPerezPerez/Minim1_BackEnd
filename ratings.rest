@@ -1,0 +1,28 @@
+### Crear una valoración
+POST http://localhost:8080/ratings/
+Content-Type: application/json
+
+{
+  "calendar": "67eae6798518c55fb8013d14",
+  "score": 1
+}
+
+### Obtener valoraciones por calendario
+GET http://localhost:8080/ratings/67eae6798518c55fb8013d14
+
+### Obtener una valoración por ID
+GET http://localhost:8080/ratings/67eae6798518c55fb8013d14
+
+### Actualizar una valoración
+PUT http://localhost:8080/ratings/67ebc202733b23eee84ca62a
+Content-Type: application/json
+
+{
+  "score": 0
+}
+
+### Eliminar una valoración
+DELETE http://localhost:8080/ratings/67ebc202733b23eee84ca62a
+
+### Listar todas las valoraciones
+GET http://localhost:8080/ratings
